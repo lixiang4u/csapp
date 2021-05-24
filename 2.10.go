@@ -8,7 +8,8 @@ import (
 func main() {
 
 	//showBytes()
-	swapTwoInts()
+	//swapTwoInts()
+	ShowSwapStep()
 
 }
 
@@ -32,4 +33,18 @@ func swapTwoInts() {
 	a = a ^ b
 
 	log.Println("a:", a, "b:", b)
+}
+
+// 二进制亦或操作可实现环
+func ShowSwapStep() {
+	var a = 18
+	var b = 25
+
+	log.Println("a:", fmt.Sprintf("%b", a))
+	log.Println("b:", fmt.Sprintf("%b", b))
+
+	log.Println("^: ", fmt.Sprintf("%b", a^b))
+	log.Println("^:", fmt.Sprintf("%b", a^b^a))
+	log.Println("^:", fmt.Sprintf("%b", a^b^b)) // 亦或同一个值两次则变回原值
+
 }
